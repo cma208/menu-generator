@@ -62,6 +62,33 @@
   font-style: italic;
 }
 
+/* Paired block: title + two-column row */
+.menu-paired-block {
+  margin-top: 20px;
+}
+
+.menu-paired-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #b8860b;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 12px 0;
+}
+
+/* Two-column row for appetizer + main_dish */
+.menu-columns-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.menu-columns-row .menu-section {
+  margin-top: 0;
+}
+
 /* Menu Section */
 .menu-section {
   margin-top: 20px;

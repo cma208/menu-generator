@@ -8,7 +8,7 @@ const CATEGORY_LABELS = {
   beberage: 'Bebidas',
 };
 
-const EMPTY_FORM = { name: '', category: 'main_dish', price: '' };
+const EMPTY_FORM = { name: '', category: 'appetizer', price: '' };
 
 export default function AddDishForm({ onAddDish }) {
   const [form, setForm] = useState(EMPTY_FORM);
@@ -25,7 +25,7 @@ export default function AddDishForm({ onAddDish }) {
       id: 'tmp_' + Date.now(),
       name: form.name.trim(),
       category: form.category,
-      price: form.category !== 'main_dish' && form.price !== '' ? parseFloat(form.price) : null,
+      price: form.category !== 'main_dish' && form.category !== 'appetizer' && form.price !== '' ? parseFloat(form.price) : null,
       regular: false,
     };
 
@@ -33,7 +33,7 @@ export default function AddDishForm({ onAddDish }) {
     setForm(EMPTY_FORM);
   }
 
-  const showPrice = form.category !== 'main_dish';
+  const showPrice = form.category !== 'main_dish' && form.category !== 'appetizer';
 
   return (
     <form className="add-dish-form" onSubmit={handleSubmit}>

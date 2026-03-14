@@ -1,5 +1,5 @@
 const CATEGORY_LABELS = {
-  main_dish: 'Menú del Día',
+  main_dish: 'Fondos',
   appetizer: 'Entradas',
   carte: 'A la Carta',
   beberage: 'Bebidas',
@@ -9,6 +9,8 @@ const MENU_FIXED_PRICE = 'S/.17';
 
 export default function MenuSection({ category, dishes }) {
   const isMainDish = category === 'main_dish';
+  const isAppetizer = category === 'appetizer';
+  const hasNoPrice = isMainDish || category === 'appetizer';
 
   return (
     <section className="menu-section">
@@ -16,7 +18,7 @@ export default function MenuSection({ category, dishes }) {
       <div className="menu-items">
         {dishes.map((dish) => (
           <div key={dish.id} className="menu-item">
-            {isMainDish ? (
+            {hasNoPrice ? (
               <span className="menu-item-name">{dish.name}</span>
             ) : (
               <>
@@ -30,7 +32,7 @@ export default function MenuSection({ category, dishes }) {
           </div>
         ))}
       </div>
-      {isMainDish && (
+      {isAppetizer && (
         <div className="menu-fixed-price-row">
           <span className="menu-fixed-price">{MENU_FIXED_PRICE}</span>
         </div>
