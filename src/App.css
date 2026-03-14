@@ -1,0 +1,23 @@
+@import './styles/selection.css';
+@import './styles/menu.css';
+@import './styles/print.css';
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f2ede4;
+}
+
+/* App Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}

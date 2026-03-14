@@ -1,0 +1,23 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #menu-preview-container,
+  #menu-preview-container * {
+    visibility: visible;
+  }
+
+  #menu-preview-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .export-buttons {
+    display: none;
+  }
+}

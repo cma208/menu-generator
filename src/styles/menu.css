@@ -1,0 +1,173 @@
+/* Menu Preview Wrapper */
+.menu-preview-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  background: #f2ede4;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Menu Container */
+.menu-preview-container {
+  background: #fffdf7;
+  border: 2px solid #c9a96e;
+  box-shadow: 0 4px 24px rgba(100, 70, 30, 0.12);
+  border-radius: 4px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 560px;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+}
+
+/* Menu Header */
+.menu-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.restaurant-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b8860b;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
+}
+
+.menu-divider {
+  border: none;
+  border-top: 1px solid #c9a96e;
+  margin: 10px 0;
+}
+
+.restaurant-address {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.82rem;
+  color: #7a6040;
+  margin: 6px 0 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.restaurant-hours {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  color: #9e8060;
+  margin: 2px 0 6px 0;
+  font-style: italic;
+}
+
+/* Menu Section */
+.menu-section {
+  margin-top: 20px;
+}
+
+.menu-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7a5c3a;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+/* Menu Items */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.menu-item-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: #2d2218;
+}
+
+.menu-item-dots {
+  flex: 1;
+  border-bottom: 1px dotted #c9a96e;
+  margin: 0 6px;
+  position: relative;
+  top: -3px;
+}
+
+.menu-item-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  color: #5a4020;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Fixed price row for main_dish */
+.menu-fixed-price-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.menu-fixed-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b8860b;
+  border-top: 1px solid #c9a96e;
+  padding-top: 4px;
+}
+
+/* Empty state */
+.menu-empty {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: #b0a090;
+  text-align: center;
+  padding: 32px 0;
+  font-style: italic;
+}
+
+/* Export Buttons */
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-export {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: opacity 0.15s;
+}
+
+.btn-export:hover {
+  opacity: 0.85;
+}
+
+.btn-print {
+  background: #7a5c3a;
+  color: #fff;
+}
+
+.btn-png {
+  background: #b8860b;
+  color: #fff;
+}
