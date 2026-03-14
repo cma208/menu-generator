@@ -1,5 +1,5 @@
 export default function DishCheckbox({ dish, checked, onToggle }) {
-  const { id, name, price, regular } = dish;
+  const { id, name, price, temporal } = dish;
 
   return (
     <label className="dish-checkbox">
@@ -12,7 +12,7 @@ export default function DishCheckbox({ dish, checked, onToggle }) {
       {price != null && (
         <span className="dish-price">S/.{price.toFixed(2)}</span>
       )}
-      {!regular && <span className="badge-temporal">temporal</span>}
+      {temporal && <span className="badge-temporal">temporal</span>}
     </label>
   );
 }

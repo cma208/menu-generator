@@ -5,7 +5,7 @@ import MenuPreview from './components/MenuPreview/MenuPreview.jsx';
 
 export default function App() {
   const [dishes, setDishes] = useState(initialDishes);
-  const [activeIds, setActiveIds] = useState(new Set());
+  const [activeIds, setActiveIds] = useState(new Set(initialDishes.filter((d) => d.regular).map((d) => d.id)));
 
   function handleToggle(id) {
     setActiveIds((prev) => {

@@ -27,6 +27,7 @@ export default function AddDishForm({ onAddDish }) {
       category: form.category,
       price: form.category !== 'main_dish' && form.category !== 'appetizer' && form.price !== '' ? parseFloat(form.price) : null,
       regular: false,
+      temporal: true,
     };
 
     onAddDish(newDish);
