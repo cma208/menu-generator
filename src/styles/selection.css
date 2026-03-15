@@ -198,7 +198,7 @@
   background: #5e4429;
 }
 
-@media (max-width: 767px), (orientation: landscape) and (max-height: 500px) {
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-height: 500px) {
   .selection-panel {
     width: 100%;
     min-width: unset;

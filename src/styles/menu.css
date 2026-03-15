@@ -203,7 +203,7 @@
   color: #fff;
 }
 
-@media (max-width: 767px), (orientation: landscape) and (max-height: 500px) {
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-height: 500px) {
   .menu-preview-wrapper {
     padding: 20px 12px;
     min-height: auto;
