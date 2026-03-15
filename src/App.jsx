@@ -6,6 +6,7 @@ import MenuPreview from './components/MenuPreview/MenuPreview.jsx';
 export default function App() {
   const [dishes, setDishes] = useState(initialDishes);
   const [activeIds, setActiveIds] = useState(new Set(initialDishes.filter((d) => d.regular).map((d) => d.id)));
+  const [menuLayout, setMenuLayout] = useState('paired');
 
   function handleToggle(id) {
     setActiveIds((prev) => {
@@ -33,8 +34,10 @@ export default function App() {
         activeIds={activeIds}
         onToggle={handleToggle}
         onAddDish={handleAddDish}
+        menuLayout={menuLayout}
+        onToggleLayout={setMenuLayout}
       />
-      <MenuPreview activeDishes={activeDishes} />
+      <MenuPreview activeDishes={activeDishes} menuLayout={menuLayout} />
     </div>
   );
 }

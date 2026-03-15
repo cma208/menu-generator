@@ -112,6 +112,10 @@
   gap: 6px;
 }
 
+.menu-items--centered {
+  align-items: center;
+}
+
 .menu-item {
   display: flex;
   align-items: baseline;
@@ -143,7 +147,7 @@
 /* Fixed price row for main_dish */
 .menu-fixed-price-row {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 8px;
 }
 
