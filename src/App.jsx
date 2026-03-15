@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { initialDishes } from './data/initialDishes.js';
 import SelectionPanel from './components/SelectionPanel/SelectionPanel.jsx';
 import MenuPreview from './components/MenuPreview/MenuPreview.jsx';
@@ -8,6 +8,21 @@ export default function App() {
   const [activeIds, setActiveIds] = useState(new Set(initialDishes.filter((d) => d.regular).map((d) => d.id)));
   const [menuLayout, setMenuLayout] = useState('paired');
   const [activeTab, setActiveTab] = useState('selection');
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => localStorage.getItem('menuDarkMode') === 'true'
+  );
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', isDarkMode);
+  }, [isDarkMode]);
+
+  function handleToggleDarkMode() {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      localStorage.setItem('menuDarkMode', next);
+      return next;
+    });
+  }
 
   function handleToggle(id) {
     setActiveIds((prev) => {
@@ -51,6 +66,8 @@ export default function App() {
         onAddDish={handleAddDish}
         menuLayout={menuLayout}
         onToggleLayout={setMenuLayout}
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={handleToggleDarkMode}
       />
       <MenuPreview activeDishes={activeDishes} menuLayout={menuLayout} />
     </div>

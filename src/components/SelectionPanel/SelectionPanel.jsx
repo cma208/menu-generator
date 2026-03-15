@@ -2,7 +2,7 @@ import { CATEGORY_ORDER, groupByCategory } from '../../data/initialDishes.js';
 import CategoryGroup from './CategoryGroup.jsx';
 import AddDishForm from './AddDishForm.jsx';
 
-export default function SelectionPanel({ dishes, activeIds, onToggle, onAddDish, menuLayout, onToggleLayout }) {
+export default function SelectionPanel({ dishes, activeIds, onToggle, onAddDish, menuLayout, onToggleLayout, isDarkMode, onToggleDarkMode }) {
   const grouped = groupByCategory(dishes);
 
   return (
@@ -23,6 +23,13 @@ export default function SelectionPanel({ dishes, activeIds, onToggle, onAddDish,
             title="Vista lista"
           >
             ≡
+          </button>
+          <button
+            className="layout-toggle-btn"
+            onClick={onToggleDarkMode}
+            title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+          >
+            {isDarkMode ? '☀' : '☾'}
           </button>
         </div>
       </div>

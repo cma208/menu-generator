@@ -1,6 +1,7 @@
 @import './styles/selection.css';
 @import './styles/menu.css';
 @import './styles/print.css';
+@import './styles/dark-mode.css';
 
 /* Reset */
 *,

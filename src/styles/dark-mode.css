@@ -1,0 +1,93 @@
+/* Dark mode overrides — scoped to body.dark-mode only.
+   .menu-preview-container and its children are NEVER targeted here. */
+
+body.dark-mode {
+  background: #1a1510;
+}
+
+body.dark-mode .selection-panel {
+  background: #221c15;
+  border-right-color: #3a2e22;
+}
+
+body.dark-mode .panel-title {
+  color: #d4c4a8;
+}
+
+body.dark-mode .category-heading {
+  color: #c9a96e;
+  border-bottom-color: #3a2e22;
+}
+
+body.dark-mode .dish-name {
+  color: #e0d8cc;
+}
+
+body.dark-mode .dish-price {
+  color: #8a7a68;
+}
+
+body.dark-mode .dish-checkbox:hover {
+  background: #2e2518;
+}
+
+body.dark-mode .add-dish-form {
+  background: #1e1812;
+  border-color: #3a2e22;
+}
+
+body.dark-mode .add-dish-heading {
+  color: #c9a96e;
+}
+
+body.dark-mode .form-field label {
+  color: #c9a96e;
+}
+
+body.dark-mode .form-field input,
+body.dark-mode .form-field select {
+  background: #2a2218;
+  color: #e0d8cc;
+  border-color: #4a3c2c;
+}
+
+body.dark-mode .form-field input:focus,
+body.dark-mode .form-field select:focus {
+  border-color: #c9a96e;
+}
+
+body.dark-mode .layout-toggle-btn {
+  border-color: #4a3c2c;
+  color: #c9a96e;
+}
+
+body.dark-mode .layout-toggle-btn:hover {
+  background: #2e2518;
+  border-color: #c9a96e;
+}
+
+body.dark-mode .layout-toggle-btn.active {
+  background: #7a5c3a;
+  border-color: #7a5c3a;
+  color: #fff;
+}
+
+/* Outer scroll area only — lets the cream menu "float" */
+body.dark-mode .menu-preview-wrapper {
+  background: #151210;
+}
+
+/* Mobile tabs */
+body.dark-mode .mobile-tabs {
+  background: #1a1510;
+}
+
+body.dark-mode .mobile-tab {
+  background: #221c15;
+  color: #c9bfb0;
+}
+
+body.dark-mode .mobile-tab--active {
+  background: #7a5c3a;
+  color: #ffe8c8;
+}
