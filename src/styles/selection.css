@@ -197,3 +197,20 @@
 .add-dish-btn:hover {
   background: #5e4429;
 }
+
+@media (max-width: 767px), (orientation: landscape) and (max-height: 500px) {
+  .selection-panel {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    position: static;
+    padding: 20px 16px;
+    border-right: none;
+    overflow-y: visible;
+  }
+
+  .form-field input,
+  .form-field select {
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+  }
+}

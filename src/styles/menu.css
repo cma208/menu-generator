@@ -202,3 +202,29 @@
   background: #b8860b;
   color: #fff;
 }
+
+@media (max-width: 767px), (orientation: landscape) and (max-height: 500px) {
+  .menu-preview-wrapper {
+    padding: 20px 12px;
+    min-height: auto;
+  }
+
+  .menu-preview-container {
+    padding: 24px 20px;
+  }
+
+  .menu-columns-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .export-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-export {
+    width: 100%;
+    text-align: center;
+  }
+}

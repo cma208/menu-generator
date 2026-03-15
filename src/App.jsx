@@ -7,6 +7,7 @@ export default function App() {
   const [dishes, setDishes] = useState(initialDishes);
   const [activeIds, setActiveIds] = useState(new Set(initialDishes.filter((d) => d.regular).map((d) => d.id)));
   const [menuLayout, setMenuLayout] = useState('paired');
+  const [activeTab, setActiveTab] = useState('selection');
 
   function handleToggle(id) {
     setActiveIds((prev) => {
@@ -28,7 +29,21 @@ export default function App() {
   const activeDishes = dishes.filter((d) => activeIds.has(d.id));
 
   return (
-    <div className="app-layout">
+    <div className="app-layout" data-active-tab={activeTab}>
+      <div className="mobile-tabs">
+        <button
+          className={`mobile-tab${activeTab === 'selection' ? ' mobile-tab--active' : ''}`}
+          onClick={() => setActiveTab('selection')}
+        >
+          Selección
+        </button>
+        <button
+          className={`mobile-tab${activeTab === 'preview' ? ' mobile-tab--active' : ''}`}
+          onClick={() => setActiveTab('preview')}
+        >
+          Vista Previa
+        </button>
+      </div>
       <SelectionPanel
         dishes={dishes}
         activeIds={activeIds}

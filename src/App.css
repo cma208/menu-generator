@@ -21,3 +21,42 @@ body {
   display: flex;
   min-height: 100vh;
 }
+
+.mobile-tabs { display: none; }
+
+@media (max-width: 767px), (orientation: landscape) and (max-height: 500px) {
+  .app-layout { flex-direction: column; }
+
+  .mobile-tabs {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .mobile-tab {
+    flex: 1;
+    padding: 14px 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: none;
+    cursor: pointer;
+    background: #3a2e22;
+    color: #e0d8cc;
+  }
+
+  .mobile-tab--active {
+    background: #c9a96e;
+    color: #2d2218;
+  }
+
+  .app-layout[data-active-tab="preview"] .selection-panel { display: none; }
+  .app-layout[data-active-tab="selection"] .menu-preview-wrapper { display: none; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .mobile-tab { padding: 10px 0; }
+}
