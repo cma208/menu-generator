@@ -16,6 +16,9 @@ export const initialDishes = [
   { id: 'main_12', name: 'Carapulcra', category: 'main_dish', price: null, regular: false },
   { id: 'main_13', name: 'Pollo en Salsa de Champiñones', category: 'main_dish', price: null, regular: false },
   { id: 'main_14', name: 'Hígado Encebollado', category: 'main_dish', price: null, regular: false },
+  { id: 'main_15', name: 'Tallarin Verde Con Churrasco', category: 'main_dish', price: null, regular: false },
+  { id: 'main_16', name: 'Pollo al Sillao', category: 'main_dish', price: null, regular: false },
+  { id: 'main_17', name: 'Lentejas con Pescado', category: 'main_dish', price: null, regular: false },
   
   // Entradas
   { id: 'app_1', name: 'Ensalada Mixta', category: 'appetizer', price: null, regular: true },
@@ -27,12 +30,14 @@ export const initialDishes = [
   { id: 'app_7', name: 'Aguadito de Pollo', category: 'appetizer', price: null, regular: false },
   { id: 'app_8', name: 'Crema de Zapallo', category: 'appetizer', price: null, regular: false },
   { id: 'app_9', name: 'Sopa de Menestrón', category: 'appetizer', price: null, regular: false },
+  { id: 'app_10', name: 'Sancochado', category: 'appetizer', price: null, regular: false },
+  { id: 'app_11', name: 'Crema de Rocoto', category: 'appetizer', price: null, regular: false },
 
   // A la Carta
-  { id: 'carte_1', name: 'Picante de Cuy', category: 'carte', price: 40, regular: true },
-  { id: 'carte_2', name: 'Bistec a lo Pobre', category: 'carte', price: 20, regular: true },
-  { id: 'carte_3', name: 'Trucha Frita', category: 'carte', price: 18, regular: true },
-  { id: 'carte_4', name: 'Milanesa', category: 'carte', price: 18, regular: true },
+  { id: 'carte_1', name: 'Picante de Cuy', category: 'carte', price: 43, regular: true },
+  { id: 'carte_2', name: 'Bistec a lo Pobre', category: 'carte', price: 23, regular: true },
+  { id: 'carte_3', name: 'Trucha Frita', category: 'carte', price: 20, regular: true },
+  { id: 'carte_4', name: 'Milanesa', category: 'carte', price: 20, regular: true },
   { id: 'carte_5', name: 'Milanesa a lo Pobre', category: 'carte', price: 23, regular: true },
   { id: 'carte_6', name: 'Tacu Tacu con Lomo', category: 'carte', price: 20, regular: false },
   { id: 'carte_7', name: 'Tallarin a la Huancaína con Lomo', category: 'carte', price: 20, regular: false },

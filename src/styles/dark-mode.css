@@ -14,9 +14,17 @@ body.dark-mode .panel-title {
   color: #d4c4a8;
 }
 
+body.dark-mode .panel-title-row {
+  background: #221c15;
+}
+
 body.dark-mode .category-heading {
   color: #c9a96e;
   border-bottom-color: #3a2e22;
+}
+
+body.dark-mode .category-chevron {
+  color: #c9a96e;
 }
 
 body.dark-mode .dish-name {

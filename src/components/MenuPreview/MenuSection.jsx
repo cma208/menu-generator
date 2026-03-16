@@ -5,7 +5,7 @@ const CATEGORY_LABELS = {
   beberage: 'Bebidas',
 };
 
-const MENU_FIXED_PRICE = 'S/.17';
+const MENU_FIXED_PRICE = 'S/.19';
 
 export default function MenuSection({ category, dishes, centered, showPrice }) {
   const hasNoPrice = category === 'main_dish' || category === 'appetizer';

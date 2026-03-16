@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { CATEGORY_ORDER, groupByCategory } from '../../data/initialDishes.js';
 import CategoryGroup from './CategoryGroup.jsx';
 import AddDishForm from './AddDishForm.jsx';
 
 export default function SelectionPanel({ dishes, activeIds, onToggle, onAddDish, menuLayout, onToggleLayout, isDarkMode, onToggleDarkMode }) {
   const grouped = groupByCategory(dishes);
+  const [openCategory, setOpenCategory] = useState(CATEGORY_ORDER[0]);
 
   return (
     <aside className="selection-panel">
@@ -41,6 +43,8 @@ export default function SelectionPanel({ dishes, activeIds, onToggle, onAddDish,
             dishes={grouped[category]}
             activeIds={activeIds}
             onToggle={onToggle}
+            isOpen={openCategory === category}
+            onOpen={() => setOpenCategory(prev => prev === category ? null : category)}
           />
         ) : null
       )}
