@@ -4,7 +4,7 @@ const CATEGORY_LABELS = {
   main_dish: 'Plato de Fondo',
   appetizer: 'Entradas',
   carte: 'A la Carta',
-  beberage: 'Bebidas',
+  beverage: 'Bebidas',
 };
 
 export default function CategoryGroup({ category, dishes, activeIds, onToggle, isOpen, onOpen }) {

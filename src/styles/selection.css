@@ -1,7 +1,7 @@
 /* Selection Panel */
 .selection-panel {
-  width: 380px;
-  min-width: 380px;
+  width: 410px;
+  min-width: 410px;
   height: 100vh;
   overflow-y: auto;
   background: #fafaf8;
@@ -11,17 +11,58 @@
   font-family: 'Lato', sans-serif;
 }
 
+.panel-sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fafaf8;
+  margin-bottom: 8px;
+}
+
 .panel-title-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #fafaf8;
   padding-bottom: 12px;
 }
+
+.search-bar {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.search-input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  padding: 8px 32px 8px 10px;
+  border: 1px solid #c9bfb0;
+  border-radius: 6px;
+  background: #fff;
+  color: #2d2218;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.search-input:focus { border-color: #7a5c3a; }
+.search-input::placeholder { color: #9e8b77; }
+
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #9e8b77;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+.search-clear-btn:hover { color: #7a5c3a; }
 
 .panel-title {
   font-size: 1.1rem;
@@ -244,7 +285,7 @@
   }
 
   /* Offset sticky header below the mobile-tabs bar (~46px: 14px padding × 2 + ~18px text) */
-  .panel-title-row {
+  .panel-sticky-header {
     top: 47px;
   }
 
@@ -252,11 +293,29 @@
   .form-field select {
     font-size: 16px; /* prevents iOS auto-zoom on focus */
   }
+
+  .search-input {
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+  }
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
   /* Landscape tab bar is shorter (padding: 10px × 2 + ~18px text ≈ 38px) */
-  .panel-title-row {
+  .panel-sticky-header {
     top: 38px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .panel-title        { font-size: 1.31rem; }
+  .category-heading   { font-size: 0.89rem; }
+  .dish-name          { font-size: 1.10rem; }
+  .dish-price         { font-size: 0.95rem; }
+  .add-dish-heading   { font-size: 0.92rem; }
+  .form-field label   { font-size: 0.92rem; }
+  .form-field input,
+  .form-field select  { font-size: 1.05rem; }
+  .add-dish-btn       { font-size: 1.05rem; }
+  .badge-temporal     { font-size: 0.80rem; }
+  .search-input       { font-size: 1.05rem; }
 }

@@ -5,7 +5,7 @@ const CATEGORY_LABELS = {
   main_dish: 'Plato de Fondo',
   appetizer: 'Entradas',
   carte: 'A la Carta',
-  beberage: 'Bebidas',
+  beverage: 'Bebidas',
 };
 
 const EMPTY_FORM = { name: '', category: 'appetizer', price: '' };

@@ -2,7 +2,7 @@ const CATEGORY_LABELS = {
   main_dish: 'Fondos',
   appetizer: 'Entradas',
   carte: 'A la Carta',
-  beberage: 'Bebidas',
+  beverage: 'Bebidas',
 };
 
 const MENU_FIXED_PRICE = 'S/.19';

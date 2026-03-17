@@ -4,7 +4,7 @@ import MenuHeader from './MenuHeader.jsx';
 import MenuSection from './MenuSection.jsx';
 import ExportButtons from './ExportButtons.jsx';
 
-const SOLO_CATEGORIES = ['carte', 'beberage'];
+const SOLO_CATEGORIES = ['carte', 'beverage'];
 
 export default function MenuPreview({ activeDishes, menuLayout }) {
   const menuRef = useRef();
