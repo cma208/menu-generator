@@ -1,5 +1,19 @@
 import { useState } from 'react';
 import { CATEGORY_ORDER } from '../../data/initialDishes.js';
+import { SPANISH_CONNECTORS } from '../../data/spanishConnectors.js';
+
+function toTitleCase(str) {
+  return str
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .map((word, index) =>
+      index === 0 || !SPANISH_CONNECTORS.includes(word)
+        ? word.charAt(0).toUpperCase() + word.slice(1)
+        : word
+    )
+    .join(' ');
+}
 
 const CATEGORY_LABELS = {
   main_dish: 'Plato de Fondo',
@@ -8,7 +22,7 @@ const CATEGORY_LABELS = {
   beverage: 'Bebidas',
 };
 
-const EMPTY_FORM = { name: '', category: 'appetizer', price: '' };
+const EMPTY_FORM = { name: '', category: '', price: '' };
 
 export default function AddDishForm({ onAddDish }) {
   const [form, setForm] = useState(EMPTY_FORM);
@@ -19,11 +33,11 @@ export default function AddDishForm({ onAddDish }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!form.name.trim()) return;
+    if (!form.name.trim() || !form.category) return;
 
     const newDish = {
       id: 'tmp_' + Date.now(),
-      name: form.name.trim(),
+      name: toTitleCase(form.name),
       category: form.category,
       price: form.category !== 'main_dish' && form.category !== 'appetizer' && form.price !== '' ? parseFloat(form.price) : null,
       regular: false,
@@ -34,11 +48,27 @@ export default function AddDishForm({ onAddDish }) {
     setForm(EMPTY_FORM);
   }
 
-  const showPrice = form.category !== 'main_dish' && form.category !== 'appetizer';
+  const showPrice = form.category !== '' && form.category !== 'main_dish' && form.category !== 'appetizer';
 
   return (
     <form className="add-dish-form" onSubmit={handleSubmit}>
       <h3 className="add-dish-heading">Agregar plato temporal</h3>
+      <div className="form-field">
+        <label htmlFor="add-category">Categoría</label>
+        <select
+          id="add-category"
+          name="category"
+          value={form.category}
+          onChange={handleChange}
+        >
+          <option value="" disabled>Seleccionar categoría</option>
+          {CATEGORY_ORDER.map((cat) => (
+            <option key={cat} value={cat}>
+              {CATEGORY_LABELS[cat]}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="form-field">
         <label htmlFor="add-name">Nombre</label>
         <input
@@ -48,22 +78,8 @@ export default function AddDishForm({ onAddDish }) {
           value={form.name}
           onChange={handleChange}
           placeholder="Nombre del plato"
+          disabled={!form.category}
         />
-      </div>
-      <div className="form-field">
-        <label htmlFor="add-category">Categoría</label>
-        <select
-          id="add-category"
-          name="category"
-          value={form.category}
-          onChange={handleChange}
-        >
-          {CATEGORY_ORDER.map((cat) => (
-            <option key={cat} value={cat}>
-              {CATEGORY_LABELS[cat]}
-            </option>
-          ))}
-        </select>
       </div>
       {showPrice && (
         <div className="form-field">

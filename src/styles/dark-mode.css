@@ -75,6 +75,12 @@ body.dark-mode .form-field select:focus {
   border-color: #c9a96e;
 }
 
+body.dark-mode .form-field input:disabled {
+  background: #1a1510;
+  color: #5a4e3e;
+  border-color: #2e2418;
+}
+
 body.dark-mode .layout-toggle-btn {
   border-color: #4a3c2c;
   color: #c9a96e;

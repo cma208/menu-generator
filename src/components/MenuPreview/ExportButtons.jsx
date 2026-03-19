@@ -1,8 +1,23 @@
 import html2canvas from 'html2canvas';
 
+function getTimestamp() {
+  const now = new Date();
+  const YYYY = now.getFullYear();
+  const MM = String(now.getMonth() + 1).padStart(2, '0');
+  const DD = String(now.getDate()).padStart(2, '0');
+  const HH = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  // return `${YYYY}-${MM}-${DD}-${HH}${min}`;
+  return `${DD}-${MM}-${YYYY}`;
+}
+
 export default function ExportButtons({ menuRef }) {
   function handlePrint() {
+    const timestamp = getTimestamp();
+    const original = document.title;
+    document.title = `menu-del-dia-${timestamp}`;
     window.print();
+    setTimeout(() => { document.title = original; }, 500);
   }
 
   async function handleExportPng() {
@@ -16,7 +31,7 @@ export default function ExportButtons({ menuRef }) {
     });
 
     const link = document.createElement('a');
-    link.download = 'menu-del-dia.png';
+    link.download = `menu-del-dia-${getTimestamp()}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   }
