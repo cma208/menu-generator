@@ -36,6 +36,16 @@ export const initialDishes = [
   { id: 'main_31', name: 'Pollo al Horno con Ensalada Rusa', category: 'main_dish', price: null, regular: false, weight: 4 },
   { id: 'main_32', name: 'Cau-Cau', category: 'main_dish', price: null, regular: false, weight: 4 },
   { id: 'main_33', name: 'Alverjita Verde con Pescado', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_34', name: 'Pallares con Adobo de Chancho', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_35', name: 'Pallares con Pescado', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_36', name: 'Frejol Castilla con Pescado', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_37', name: 'Frejol Panamito con Pescado', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_38', name: 'Ceviche de Pollo', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_39', name: 'Pachamanca a la Olla', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_40', name: 'Olluquito con Carne', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_41', name: 'Mondonguito a la Italiana', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_42', name: 'Patitas con Maní', category: 'main_dish', price: null, regular: false, weight: 4 },
+  { id: 'main_43', name: 'Locro de Zapallo con Churrasco', category: 'main_dish', price: null, regular: false, weight: 4 },
 
   // Entradas
   { id: 'app_1', name: 'Ensalada Mixta', category: 'appetizer', price: null, regular: true, weight: 1 },
@@ -54,6 +64,11 @@ export const initialDishes = [
   { id: 'app_14', name: 'Huevo a la Rusa', category: 'appetizer', price: null, regular: false, weight: 4 },
   { id: 'app_15', name: 'Sopa de Sémola', category: 'appetizer', price: null, regular: false, weight: 4 },
   { id: 'app_16', name: 'Chupe de Pescado', category: 'appetizer', price: null, regular: false, weight: 4 },
+  { id: 'app_17', name: 'Palta Rellena', category: 'appetizer', price: null, regular: false, weight: 4 },
+  { id: 'app_18', name: 'Tequeños', category: 'appetizer', price: null, regular: false, weight: 4 },
+  { id: 'app_19', name: 'Ocopa', category: 'appetizer', price: null, regular: false, weight: 4 },
+  { id: 'app_20', name: 'Caldo de Pollo', category: 'appetizer', price: null, regular: false, weight: 4 },
+  { id: 'app_21', name: 'Ensalada de Fideos', category: 'appetizer', price: null, regular: false, weight: 4 },
 
   // A la Carta
   { id: 'carte_1', name: 'Picante de Cuy', category: 'carte', price: 43, regular: true, weight: 1 },
@@ -61,7 +76,7 @@ export const initialDishes = [
   { id: 'carte_3', name: 'Trucha Frita', category: 'carte', price: 20, regular: true, weight: 1 },
   { id: 'carte_4', name: 'Milanesa', category: 'carte', price: 20, regular: true, weight: 1 },
   { id: 'carte_5', name: 'Milanesa a lo Pobre', category: 'carte', price: 23, regular: true, weight: 1 },
-  { id: 'carte_6', name: 'Tacu Tacu con Lomo', category: 'carte', price: 20, regular: false, weight: 1 },
+  { id: 'carte_6', name: 'Tacu Tacu con Lomo', category: 'carte', price: 23, regular: false, weight: 1 },
   { id: 'carte_7', name: 'Tallarín a la Huancaína con Lomo', category: 'carte', price: 23, regular: false, weight: 1 },
 
   // Bebidas
